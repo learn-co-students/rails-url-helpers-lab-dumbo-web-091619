@@ -6,7 +6,14 @@ class StudentsController < ApplicationController
   end
 
   def show
+   
   end
+
+  def activate
+    set_student.toggle!(:active)
+    redirect_to student_path(@student)
+  end
+
 
   private
 
